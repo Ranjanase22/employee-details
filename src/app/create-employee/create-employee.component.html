@@ -1,0 +1,61 @@
+<div class="form-container">
+  <h2 class="panel-heading">Create Employee</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fullName"><b>Full Name</b></label>
+      <input id="fullName" formControlName="fullName" #fullNameInput class="form-control" type="text" />
+      <!-- Error message for full name -->
+      <div *ngIf="employeeForm.get('fullName')?.invalid && (employeeForm.get('fullName')?.touched || employeeForm.get('fullName')?.dirty)" class="error-message">
+        <div *ngIf="employeeForm.get('fullName')?.errors?.['required']">Full Name is required.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email"><b>Email</b></label>
+      <input id="email" formControlName="email" class="form-control" type="email" />
+      <!-- Error message for email -->
+      <div *ngIf="employeeForm.get('email')?.invalid && (employeeForm.get('email')?.touched || employeeForm.get('email')?.dirty)" class="error-message">
+        <div *ngIf="employeeForm.get('email')?.errors?.['required']">Email is required.</div>
+        <div *ngIf="employeeForm.get('email')?.errors?.['email']">Enter a valid email address.</div>
+      </div>
+    </div>
+
+    <!-- Nested form for skills and experience -->
+    <div class="form-group">
+      <div class="nested-form">
+        <div class="nested-form-group">
+          <label for="skill"><b>Skill</b></label>
+          <input id="skill" formControlName="skill" class="form-control" type="text" placeholder="java,HTML,angular....etc" />
+        </div>
+        <div class="nested-form-group">
+          <label for="experience"><b>Experience</b></label>
+          <input id="experience" formControlName="experience" class="form-control" type="number" min="0" placeholder="In Years" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Radio buttons for proficiency -->
+    <div class="form-group">
+      <label><b>Proficiency</b></label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" formControlName="proficiency" value="beginner" />
+          <b>Beginner</b>
+        </label>
+        <label>
+          <input type="radio" formControlName="proficiency" value="intermediate" />
+          <b>Intermediate</b>
+        </label>
+        <label>
+          <input type="radio" formControlName="proficiency" value="advanced" />
+          <b>Advanced</b>
+        </label>
+      </div>
+    </div>
+
+    <!-- Footer panel with Save button -->
+    <div class="panel-footer">
+      <button type="submit" class="btn">Save</button>
+    </div>
+  </form>
+</div>

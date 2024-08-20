@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin-right: 15px;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer; /* Ensure the pointer cursor is shown */
+  }
+  
+  .nav a.active {
+    background-color: #575757;
+  }
+  
+  .nav a:hover {
+    background-color: #575757;
+  }
+  

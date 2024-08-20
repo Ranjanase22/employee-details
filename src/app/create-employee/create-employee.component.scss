@@ -1,0 +1,111 @@
+/* Footer panel styling */
+.panel-footer {
+    border-top: 2px solid #007bff; /* Blue border to match the heading */
+    padding-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+.panel-footer .btn {
+    max-width: 200px; /* Restrict the button width for a more polished look */
+}
+
+/* Heading of the panel */
+.panel-heading {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* Blue border for emphasis */
+    padding-bottom: 10px;
+}
+
+/* Container for the form elements */
+.form-container {
+    max-width: 500px; /* Max width for the form box */
+    margin: 0 auto; /* Center the form container */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for the form */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for the form */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Nested form container */
+.nested-form {
+    display: flex; /* Use flexbox for side-by-side layout */
+    gap: 20px; /* Space between fields */
+}
+
+/* Nested form group styling */
+.nested-form-group {
+    flex: 1; /* Allow groups to grow and shrink equally */
+    align-items: center;
+}
+
+/* Input field styling */
+.form-control {
+    width: 100%; /* Ensure full width within the form container */
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ced4da; /* Light gray border for the input */
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Focus state for input fields */
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Blue shadow on focus */
+}
+
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    margin-top: 8px;
+    font-size: 12px;
+    /* Ensure it's not hidden or overlapped */
+}
+
+/* Button styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Blue background for the button */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+
+/* Radio button group styling */
+.radio-group {
+    display: flex; /* Use flexbox for horizontal alignment */
+    gap: 20px; /* Space between radio buttons */
+}
+
+/* Radio button label styling */
+.radio-group label {
+    display: flex;
+    align-items: center; /* Center the radio button with the text */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Adjust size of radio button */
+.radio-group input[type="radio"] {
+    margin-right: 8px; /* Space between radio button and text */
+}
+
+

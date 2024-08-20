@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="panel-heading">Employee List</h2>
+    
+    <table *ngIf="employees.length > 0" class="employee-table">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Skill</th>
+          <th>Experience (Years)</th>
+          <th>Proficiency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.fullName }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.skill }}</td>
+          <td>{{ employee.experience }}</td>
+          <td>{{ employee.proficiency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p *ngIf="employees.length === 0" class="no-data-message">No employees found.</p>
+  </div>
+  
